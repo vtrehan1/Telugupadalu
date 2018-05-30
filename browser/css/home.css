@@ -1,0 +1,4 @@
+/* Warnings not shown unless user makes an error */
+p.search-warning {
+    display: none;
+}

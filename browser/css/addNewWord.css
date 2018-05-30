@@ -1,0 +1,16 @@
+#keyboard {
+    display: block;
+}
+
+/* Warnings not shown unless user makes an error */
+p.word-warning {
+    display: none;
+}
+
+p.sentence-warning {
+    display: none;
+}
+
+p.translation-warning {
+    display: none;
+}
