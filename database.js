@@ -80,7 +80,7 @@ function addNewWord(synonymArray, linkArray, teluguWord, teluguSentence, english
         }
     */
     synonymArray.forEach(synonym => {
-
+        
         synonymRef.child(synonym.toLowerCase()).push(teluguWord).catch(err => console.error(err));
     
     });

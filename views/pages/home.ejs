@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--Loading head.ejs (contains metadata)-->
+    <% include ../partials/head %>
+
+    <!--Loading custom CSS-->
+    <link rel="stylesheet" href="/css/home.css" type="text/css">
+
+    <title>Home!</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <!--Loading header.ejs (contains navbar HTML)-->
+        <% include ../partials/header %>
+
+    </header>
+
+    <!--Wrapper for home page HTML-->
+    <main>
+
+        <!--Wrapper for entire body-->
+        <section class="hero is-primary is-fullheight">
+
+                <!--Wrapper for page body-->
+                <div class="hero-body">
+
+                    <!--Wrapper for center of page body-->
+                    <div class="container has-text-centered">
+
+                        <!--Wrapper for centered content-->
+                        <div class="column is-6 is-offset-3">
+
+                            <h2 class="title is-2">
+                                The world's best
+                                <br> English-Telugu dictionary
+                            </h2>
+
+                            <!--Used as a vertical spacer-->
+                            <br>
+
+                            <!--Outer wrapper for search field-->
+                            <div class="field is-grouped is-grouped-centered">
+
+                                <!--Inner wrapper for search field-->
+                                <div class="control is-expanded">
+
+                                    <input class="input search is-large has-text-centered" type="text" placeholder="Enter in Telugu or English">
+
+                                    <p class="search-warning subtitle is-6 has-text-link">
+                                        Invalid input
+                                    </p>
+
+                                </div>
+                                <!--End of inner wrapper for search field-->
+
+                                <!--Wrapper for search button-->
+                                <div class="control">
+
+                                    <button class="button search is-white is-large is-outlined">
+                                        Search
+                                    </button>
+
+                                </div>
+                                <!--End of wrapper for search button-->
+
+                            </div>
+                            <!--End of outer wrapper for search field-->
+
+                        </div>
+                        <!--End of wrapper for centered content-->
+
+                    </div>
+                    <!--End of wrapper for center of page body-->
+
+                </div>
+                <!--End of wrapper for page body-->
+
+        </section>
+        <!--End of wrapper for entire body-->
+
+        <!--Script containing custom JS-->
+        <script src="/js/home.js"></script>
+        
+    </main>
+    <!--End of wrapper for home page HTML-->
+
+</body>
+
+</html>

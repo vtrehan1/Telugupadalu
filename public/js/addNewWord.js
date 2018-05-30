@@ -215,7 +215,7 @@
             formData.englishTranslation = $('input.translation').val();
 
             // POST data to backend
-            fetch('http://localhost:3000/addNewWord', {
+            fetch('http://localhost:3000/new/word', {
 				body: JSON.stringify(formData),
 				method: 'POST',
 				headers: {

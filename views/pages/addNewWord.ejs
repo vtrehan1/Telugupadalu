@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <!--Loading head.ejs (contains metadata)-->
+    <% include ../partials/head %>
+
+    <!--Loading custom CSS-->
+    <link rel="stylesheet" href="/css/addNewWord.css" type="text/css">
+
+    <title>Add a word!</title>
+
+</head>
+
+<body>
+
+    <header>
+
+        <!--Loading header.ejs (contains navbar HTML)-->
+        <% include ../partials/header %>
+
+        <!--Loading the JS for the Bulma tags-input extension-->
+        <script src="/js/tagsInput.js"></script>
+
+        <!--Loading the CSS for the Bulma tags-input extension-->
+        <link rel="stylesheet" href="/css/tagsInput.css">
+
+    </header>
+
+    <!--Wrapper for home page HTML-->
+    <main>
+
+        <!--Wrapper for entire body-->
+        <section class="section">
+
+            <!--Wrapper for the column containing form-->
+            <div class="columns is-mobile is-centered">
+
+                <!--Wrapper for the entire form-->
+                <div class="column is-half is-narrow">
+
+                    <!--Page title-->
+                    <h1 class="title is-1 has-text-centered">Add a word</h1>
+
+                    <!--Wrapper for the Telugu word the user wants to add-->
+                    <div class="field">
+
+                        <p class="subtitle is-4">Telugu word</p>
+
+                        <!--Wrapper for the Telugu word input field-->
+                        <div class="control">
+
+                            <input class="input word" type="text" placeholder="Type the word in Telugu">
+                            <p class="word-warning subtitle is-6 has-text-danger">
+                                You must enter the word in Telugu
+                            </p>
+
+                        </div>
+                        <!--End of wrapper for the Telugu word input field-->
+
+                        <br>
+
+                        <!--Wrapper for Telugu keyboard-->
+                        <div id="keyboard">
+
+                            <!--Row one of Telugu keyboard-->
+                            <div class="button word">అ</div>
+                            <div class="button word">ఆ</div>
+                            <div class="button word">ఇ</div>
+                            <div class="button word">ఈ</div>
+                            <div class="button word">ఉ</div>
+                            <div class="button word">ఊ</div>
+                            <div class="button word">ఋ</div>
+                            <div class="button word">ౠ</div>
+                            <div class="button word">ఎ</div>
+                            <div class="button word">ఏ</div>
+                            <div class="button word">ఐ</div>
+                            <div class="button word">ఒ</div>
+                            <div class="button word">ఓ</div>
+                            <div class="button word">ఔ</div>
+                            <div class="button word">ం</div>
+                            <div class="button word">ః</div>
+                            <div class="button word">క</div>
+                            <div class="button word">ఖ</div>
+                            <div class="button word">గ</div>
+                            <div class="button word">ఘ</div>
+                            <div class="button word">ఙ</div>
+                            <div class="button word">చ</div>
+                            <div class="button word">ఛ</div>
+                            <div class="button word">జ</div>
+                            <div class="button word">ఝ</div>
+                            <div class="button word">ఞ</div>
+                            <div class="button word">ట</div>
+                            <div class="button word">ఠ</div>
+                            <div class="button word">డ</div>
+                            <div class="button word">ఢ</div>
+                            <div class="button word">ణ</div>
+                            <div class="button word">త</div>
+                            <div class="button word">థ</div>
+                            <div class="button word">ద</div>
+                            <div class="button word">ధ</div>
+                            <div class="button word">న</div>
+                            <div class="button word">ప</div>
+                            <div class="button word">ఫ</div>
+                            <div class="button word">బ</div>
+                            <div class="button word">భ</div>
+                            <div class="button word">మ</div>
+                            <div class="button word">య</div>
+                            <div class="button word">ర</div>
+                            <div class="button word">ఱ</div>
+                            <div class="button word">ల</div>
+                            <div class="button word">వ</div>
+                            <div class="button word">ళ</div>
+                            <div class="button word">శ</div>
+                            <div class="button word">ష</div>
+                            <div class="button word">స</div>
+                            <div class="button word">హ</div>
+                            <div class="button word">క్ష</div>
+                            <!--End of row one of Telugu keyboard-->
+
+                            <br>
+                            <br>
+
+                            <!--Row two of Telugu keyboard-->
+                            <div class="button word">ా</div>
+                            <div class="button word">ి</div>
+                            <div class="button word">ీ</div>
+                            <div class="button word">ు</div>
+                            <div class="button word">ూ</div>
+                            <div class="button word">ె</div>
+                            <div class="button word">ే</div>
+                            <div class="button word">ై</div>
+                            <div class="button word">ొ</div>
+                            <div class="button word">ో</div>
+                            <div class="button word">్ర</div>
+                            <div class="button word">ృ</div>
+                            <div class="button word">ౄ</div>
+                            <div class="button word">ౌ</div>
+                            <div class="button word">్</div>
+                            <div class="button word">జ్ఞ</div>
+                            <div class="button word">ఁ</div>
+                            <!--End of row two of Telugu keyboard-->
+
+                            <br>
+                            <br>
+
+                            <!--To delete most recently entered letter-->
+                            <button sentence class="button word" id="word-delete">
+                                Delete
+                            </button sentence>
+
+                            <!--Links to webpage explaining how to type vatthulu-->
+                            <button sentence class="button sentence">
+                                <a href="http://paninikeypad.com/conjuncts/Telugu%20Vattulu.htm" target="_blank">
+                                    How to type vatthulu
+                                </a>
+                            </button sentence>
+
+                        </div>
+                        <!--End of wrapper for Telugu keyboard-->
+
+                    </div>
+                    <!--End of wrapper for the Telugu word the user wants to add-->
+
+                    <!--To act as a vertical spacer-->
+                    <br>
+                    <br>
+
+                    <!--Wrapper for the English synonyms input field-->
+                    <div class="field">
+
+                        <p class="subtitle is-4">English definition(s)</p>
+
+                        <div class="control">
+                            <input class="input english-synonym" type="tags" placeholder="Synonyms in English">
+                        </div>
+
+                    </div>
+                    <!--End of wrapper for the English synonyms field-->
+
+                    <!--To act as a vertical spacer-->
+                    <br>
+                    <br>
+
+                    <!--Wrapper for the sample Telugu sentence input field-->
+                    <div class="field">
+
+                        <p class="subtitle is-4">Sample sentence in Telugu</p>
+
+                        <div class="control">
+                            <input class="input sentence" type="text" placeholder="Type a sample sentence in Telugu">
+                            <p class="sentence-warning subtitle is-6 has-text-danger">
+                                You must enter the sentence in Telugu
+                            </p>
+                        </div>
+
+                        <br>
+
+                        <!--Wrapper for Telugu keyboard-->
+                        <div id="keyboard">
+
+                            <!--Row one of Telugu keyboard-->
+                            <div class="button sentence">అ</div>
+                            <div class="button sentence">ఆ</div>
+                            <div class="button sentence">ఇ</div>
+                            <div class="button sentence">ఈ</div>
+                            <div class="button sentence">ఉ</div>
+                            <div class="button sentence">ఊ</div>
+                            <div class="button sentence">ఋ</div>
+                            <div class="button sentence">ౠ</div>
+                            <div class="button sentence">ఎ</div>
+                            <div class="button sentence">ఏ</div>
+                            <div class="button sentence">ఐ</div>
+                            <div class="button sentence">ఒ</div>
+                            <div class="button sentence">ఓ</div>
+                            <div class="button sentence">ఔ</div>
+                            <div class="button sentence">ం</div>
+                            <div class="button sentence">ః</div>
+                            <div class="button sentence">క</div>
+                            <div class="button sentence">ఖ</div>
+                            <div class="button sentence">గ</div>
+                            <div class="button sentence">ఘ</div>
+                            <div class="button sentence">ఙ</div>
+                            <div class="button sentence">చ</div>
+                            <div class="button sentence">ఛ</div>
+                            <div class="button sentence">జ</div>
+                            <div class="button sentence">ఝ</div>
+                            <div class="button sentence">ఞ</div>
+                            <div class="button sentence">ట</div>
+                            <div class="button sentence">ఠ</div>
+                            <div class="button sentence">డ</div>
+                            <div class="button sentence">ఢ</div>
+                            <div class="button sentence">ణ</div>
+                            <div class="button sentence">త</div>
+                            <div class="button sentence">థ</div>
+                            <div class="button sentence">ద</div>
+                            <div class="button sentence">ధ</div>
+                            <div class="button sentence">న</div>
+                            <div class="button sentence">ప</div>
+                            <div class="button sentence">ఫ</div>
+                            <div class="button sentence">బ</div>
+                            <div class="button sentence">భ</div>
+                            <div class="button sentence">మ</div>
+                            <div class="button sentence">య</div>
+                            <div class="button sentence">ర</div>
+                            <div class="button sentence">ఱ</div>
+                            <div class="button sentence">ల</div>
+                            <div class="button sentence">వ</div>
+                            <div class="button sentence">ళ</div>
+                            <div class="button sentence">శ</div>
+                            <div class="button sentence">ష</div>
+                            <div class="button sentence">స</div>
+                            <div class="button sentence">హ</div>
+                            <div class="button sentence">క్ష</div>
+                            <!--End of row one of Telugu keyboard-->
+
+                            <br>
+                            <br>
+
+                            <!--Row two of Telugu keyboard-->
+                            <div class="button sentence">ా</div>
+                            <div class="button sentence">ి</div>
+                            <div class="button sentence">ీ</div>
+                            <div class="button sentence">ు</div>
+                            <div class="button sentence">ూ</div>
+                            <div class="button sentence">ె</div>
+                            <div class="button sentence">ే</div>
+                            <div class="button sentence">ై</div>
+                            <div class="button sentence">ొ</div>
+                            <div class="button sentence">ో</div>
+                            <div class="button sentence">్ర</div>
+                            <div class="button sentence">ృ</div>
+                            <div class="button sentence">ౄ</div>
+                            <div class="button sentence">ౌ</div>
+                            <div class="button sentence">్</div>
+                            <div class="button sentence">జ్ఞ</div>
+                            <div class="button sentence">ఁ</div>
+                            <!--End of row two of Telugu keyboard-->
+
+                            <br>
+                            <br>
+
+                            <!--To delete most recently entered letter-->
+                            <button sentence class="button sentence" id="sentence-delete">
+                                Delete
+                            </button sentence>
+
+                            <!--Links to webpage explaining how to type vatthulu-->
+                            <button sentence class="button sentence">
+                                <a href="http://paninikeypad.com/conjuncts/Telugu%20Vattulu.htm" target="_blank">
+                                    How to type vatthulu
+                                </a>
+                            </button sentence>
+
+                        </div>
+                        <!--End of wrapper for Telugu keyboard-->
+
+                    </div>
+                    <!--End of wrapper for the sample Telugu sentence input field-->
+
+                    <br>
+                    <br>
+
+                    <!--Wrapper for the sample Telugu sentence English translation input field-->
+                    <div class="field">
+
+                        <p class="subtitle is-4">Sample sentence English translation</p>
+
+                        <div class="control">
+                            <input class="input translation" type="text" placeholder="Translate your sample sentence into English">
+                            <p class="translation-warning subtitle is-6 has-text-danger">
+                                You must translate the sentence into English
+                            </p>
+                        </div>
+
+                    </div>
+                    <!--End of wrapper for the sample Telugu sentence English translation input field-->
+
+                    <br>
+                    <br>
+
+                    <!--Wrapper for links to popular media sources input field-->
+                    <div class="field">
+
+                        <p class="subtitle is-4">
+                            Link to media sources using this word (optional)
+                        </p>
+
+                        <p class="subtitle is-6">
+                            (e.g. like
+                            <a href="https://www.youtube.com/watch?v=M34DMAUWiXY&t=46s" target="_blank">
+                                https://www.youtube.com/watch?v=M34DMAUWiXY&t=46s,
+                            </a>
+                            link to
+                            <strong>exactly</strong> where the word is used)
+                        </p>
+
+                        <div class="control">
+                            <div class="control">
+                                <input class="input media" type="tags" placeholder="Link(s)">
+                            </div>
+                        </div>
+
+                    </div>
+                    <!--End of wrapper for links to popular media sources input field-->
+
+                    <br>
+                    <br>
+
+                    <!--Wrapper for submit button-->
+                    <div class="field">
+
+                        <div class="control">
+                            <button class="button submit is-link">Submit</button>
+                        </div>
+
+                        <br>
+
+                        <p class="submit-warning subtitle is-6 has-text-danger">
+                            Submission is not complete.
+                        </p>
+
+                    </div>
+                    <!--End of wrapper for submit button-->
+
+                </div>
+                <!--End of wrapper for the entire form-->
+
+            </div>
+            <!--End of wrapper for the column containing the form-->
+
+        </section>
+        <!--End of wrapper for entire body-->
+
+        <!--Script containing custom JS-->
+        <script src="/js/addNewWord.js"></script>
+
+    </main>
+    <!--End of wrapper for home page HTML-->
+
+</body>
+
+</html>
